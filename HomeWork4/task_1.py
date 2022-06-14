@@ -33,6 +33,7 @@ def find_shelve_by_doc_number(doc_num):
             result = shelve
     return result
 
+
 def delete_doc_in_shelve(doc_num):
     """
     Поиск на полках
@@ -42,6 +43,7 @@ def delete_doc_in_shelve(doc_num):
     for shelve, docs in directories.items():
         if doc_num in docs:
             directories[shelve] = list(filter(lambda x: x != doc_num, docs))
+
 
 def find_documents_by_key(**param):
     search_val = param['search']
@@ -139,10 +141,10 @@ def command_d():
         delete_doc_in_shelve(del_doc_number)
         del documents[result]
         command_i()
-        print(directories, documents)
     else:
         print("Документ не найден в базе")
         command_i()
+
 
 def command_m():
     doc_number = input("Введите номер документа:")
@@ -158,6 +160,7 @@ def command_m():
     else:
         print("Документ не найден в базе. Текущий список документов:")
         command_i()
+
 
 def main():
     command = enter_commands()
