@@ -4,11 +4,6 @@ ids = {
     'user3': [213, 98, 98, 35]
 }
 
-all_values = []
+uniq_val = sum([val for val in ids.values()], [])
 
-for val in ids.values():
-    all_values += val
-
-uniq_val = set(all_values)
-
-print(uniq_val)
+print(set(uniq_val))
