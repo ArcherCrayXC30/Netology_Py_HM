@@ -25,7 +25,6 @@ def rectangle_square():
     line_b = int(input("Длина стороны B:"))
     square = line_a * line_b
     print("Площадь прямоугольника: ", square)
-    pass
 
 areas_calc = {
     'круг': circle_square,
