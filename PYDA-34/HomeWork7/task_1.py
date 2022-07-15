@@ -10,6 +10,7 @@ class ExtendRate(Rate):
         return max_val['Name']
 
 
+
 rate = ExtendRate()
 name_max_currency = rate.max_rate_name()
 
